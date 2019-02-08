@@ -22,15 +22,15 @@ My project is a web application inspired on the classic, Pinterest. Built using 
 
 #Implementation
 
-##Phase 1: Frontend and backend setup(2 days)
-***Set up working enviroment 
-##Phase 2: User experience(4 days)
-***Users can have a homepage, followed page, boards page 
-##Phase 3: Pins functionality(5 days)
-***Users can create, update, destroy, and comment pins, reply to comments 
-##Phase 4: Search Pins, users(2 days)
-***Users can search database
-##Bonus(TBD)
+-##Phase 1: Frontend and backend setup(2 days)
+-***Set up working enviroment 
+-##Phase 2: User experience(4 days)
+-***Users can have a homepage, followed page, boards page 
+-##Phase 3: Pins functionality(5 days)
+-***Users can create, update, destroy, and comment pins, reply to comments 
+-##Phase 4: Search Pins, users(2 days)
+-***Users can search database
+-##Bonus(TBD)
 
  
 
