@@ -1,6 +1,6 @@
-#Pinterested
+# Pinterested
 
-##Minimum Viable Product
+## Minimum Viable Product
 
 My project is a web application inspired on the classic, Pinterest. Built using React and Express, I plan on giving it a similar functionality to the current version. That includes:
  
@@ -20,17 +20,17 @@ My project is a web application inspired on the classic, Pinterest. Built using 
 - [ ] Bonus: Messaging 
 - [ ] Bonus: Notifications
 
-#Implementation
+# Implementation
 
-##Phase 1: Frontend and backend setup(2 days)
+##  Phase 1: Frontend and backend setup(2 days)
 ***Set up working enviroment 
-##Phase 2: User experience(4 days)
+## Phase 2: User experience(4 days)
 ***Users can have a homepage, followed page, boards page 
-##Phase 3: Pins functionality(5 days)
+## Phase 3: Pins functionality(5 days)
 ***Users can create, update, destroy, and comment pins, reply to comments 
-##Phase 4: Search Pins, users(2 days)
+## Phase 4: Search Pins, users(2 days)
 ***Users can search database
-##Bonus(TBD)
+## Bonus(TBD)
 
  
 
