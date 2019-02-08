@@ -3,9 +3,7 @@
 ## Users
 ### User Profile
 - GET- user/:id
-### User Profile 
 - PATCH- user/:id/account
-### User Profile
 - DELETE- user/:id/account
 ### User Homepage
 - GET- user/:id/home
