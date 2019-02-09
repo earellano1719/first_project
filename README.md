@@ -20,6 +20,14 @@ My project is a web application inspired on the classic, Pinterest. Built using 
 - [ ] Bonus: Messaging 
 - [ ] Bonus: Notifications
 
+## Docs
+
+- [Wireframes](https://github.com/earellano1719/first_project/tree/master/layout/wireframes)
+- [Wireframes](https://github.com/earellano1719/first_project/tree/master/layout/wireframes)
+- [Wireframes](https://github.com/earellano1719/first_project/tree/master/layout/wireframes)
+- [Wireframes](https://github.com/earellano1719/first_project/tree/master/layout/wireframes)
+
+
 # Implementation
 
 ##  Phase 1: Frontend and backend setup(2 days)

@@ -20,8 +20,7 @@ CREATE TABLE follows {
 CREATE TABLE pin {
     id SERIAL PRIMARY KEY,
     url VARCHAR NOT NULL,
-    caption VARCHAR NOT NULL,
-    comment_type VARCHAR NOT NULL
+    caption VARCHAR NOT NULL
 }
 
 CREATE TABLE tags {
