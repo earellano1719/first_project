@@ -3,31 +3,34 @@
 ## Users
 ### User Profile
 ```
-- GET- user/:id
-- PATCH- user/:id/account
-- DELETE- user/:id/account
-### User Homepage
-- GET- user/:id/home
-### User's Following Page
-- GET- user/:id/following
+- GET- users/:id/
+- PATCH- users/:id/
+- DELETE- users/:id/
 ```
 ## Pins
-### Single Pin Routes
+### Pin Routes
 ```
-- GET- pin/:id
-- POST- pin/
-- EDIT- pin/:id
-- DELETE- pin/:id
+- GET ALL- pins/
+- GET ALL USER PINS- pins/:userid
+- GET- pins/:id
+- POST- pins/
+- EDIT- pins/:id
+- DELETE- pins/:id
 ```
 ## Boards
-### Single Board Routes
+### Board Routes
 ```
+- GET ALL USER BOARDS- boards/:userid
 - GET- boards/:id
 - POST- boards/
 - EDIT- boards/:id
 - DELETE- boards/:id
 ```
-### Multiple Boards Board Routes
+
+
 ```
-- GET- boards/
+### User Homepage
+- GET- users/:id/home
+### User's Following Page
+- GET- users/:id/following
 ```
