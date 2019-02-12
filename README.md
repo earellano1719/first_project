@@ -25,6 +25,7 @@ My project is a web application inspired on the classic, Pinterest. Built using 
 - [Wireframes](https://github.com/earellano1719/first_project/tree/master/layout/wireframes)
 - [Component Hierarchy](https://github.com/earellano1719/first_project/blob/master/layout/ComponentHierarchy.md)
 - [Sample State](https://github.com/earellano1719/first_project/blob/master/layout/SampleState.md)
+- [Routes](https://github.com/earellano1719/first_project/blob/master/layout/routes.md)
 - [Seed](https://github.com/earellano1719/first_project/blob/master/layout/seed.sql)
 
 

@@ -11,16 +11,25 @@ CREATE TABLE users {
     url VARCHAR NOT NULL
 }
 
+
+CREATE TABLE boards {
+    id SERIAL PRIMARY KEY,
+    user_id INT NOT NULL REFERENCES users(id),
+    caption VARCHAR NOT NULL   
+}
+
+CREATE TABLE pins {
+    id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(id),
+    board_id INT REFERENCES boards(id),
+    url VARCHAR NOT NULL,
+    caption VARCHAR NOT NULL
+}
+
 CREATE TABLE follows {
     id SERIAL PRIMARY KEY,
     user_id INT REFERENCES users(id),
     follower_id INT REFERENCES users(id)
-}
-
-CREATE TABLE pin {
-    id SERIAL PRIMARY KEY,
-    url VARCHAR NOT NULL,
-    caption VARCHAR NOT NULL
 }
 
 CREATE TABLE tags {
@@ -29,12 +38,6 @@ CREATE TABLE tags {
     caption VARCHAR NOT NULL
 }
 
-CREATE TABLE board {
-    id SERIAL PRIMARY KEY,
-    user_id INT NOT NULL REFERENCES users(id),
-    pin_id INT REFERENCES pin(id),
-    caption VARCHAR NOT NULL   
-}
 
 CREATE TABLE likes {
     id SERIAL PRIMARY KEY,
