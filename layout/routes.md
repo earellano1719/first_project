@@ -11,7 +11,7 @@
 ### Pin Routes
 ```
 - GET ALL- pins/
-- GET ALL USER PINS- pins/:userid
+- GET ALL USER PINS- users/:id/pins
 - GET- pins/:id
 - POST- pins/
 - EDIT- pins/:id
@@ -20,7 +20,7 @@
 ## Boards
 ### Board Routes
 ```
-- GET ALL USER BOARDS- boards/:userid
+- GET ALL USER BOARDS- user/:id/boards
 - GET- boards/:id
 - POST- boards/
 - EDIT- boards/:id

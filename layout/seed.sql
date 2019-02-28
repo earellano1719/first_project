@@ -7,6 +7,7 @@ CREATE TABLE users {
     id SERIAL PRIMARY KEY,
     full_name VARCHAR NOT NULL,
     username VARCHAR NOT NULL UNIQUE,
+    password_digest VARCHAR,
     email VARCHAR NOT NULL UNIQUE,
     url VARCHAR NOT NULL
 }

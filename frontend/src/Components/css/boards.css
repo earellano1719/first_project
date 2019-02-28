@@ -1,0 +1,44 @@
+.boardDisp {
+    display: flex;
+    justify-content: flex-start;
+    margin: 25px 80px;
+}
+
+.boardContainer{
+    height: 265px;
+    width: 300px;
+    border-radius: 10px;
+    margin: 0px 12px
+}
+
+.boardContainer:hover{
+    background-color: #eeeeee;
+    /* border: 3px solid whitesmoke; */
+}
+
+.imgContainer{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    line-height: 0;
+    column-count: 3;
+    column-gap: 0px;
+}
+
+.boardImages{
+    max-height: 100px;
+    max-width: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.titleContainer{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 21px
+}
+.titleContainer :any-link{
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 21px
+}
