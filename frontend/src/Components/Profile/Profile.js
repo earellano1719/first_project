@@ -58,6 +58,7 @@ export const Profile = (props) => {
             onClick={handleProfileStartPins}>
             Pins
             </button>
+            <h1>Chis is the fucking best coder I know!. periodt</h1>
         </p>
         {profileStart ?  <Boards boards={userBoards} pins={userPins} /> : <Pins pins={userPins} />}
         </>

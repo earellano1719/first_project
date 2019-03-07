@@ -129,6 +129,9 @@ class App extends Component {
         <div className="App">
 
           <Route render={(props) => <NavBar {...props} isLoggedIn={isLoggedIn} username={username} />} />
+          <div>
+            {greeting} {logoutButton}
+          </div>
 
           <Route path='/boards/:board_id' render={(props) => <SingleBoard {...props}
                                                               boards={boards}
@@ -168,9 +171,6 @@ class App extends Component {
         </div>
       </BrowserRouter>
 
-      <div>
-      {greeting} {logoutButton}
-      </div>
       </>
     );
   }

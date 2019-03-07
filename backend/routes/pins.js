@@ -4,6 +4,7 @@ const {getAllPinsWithUsers, getAllPins, getSinglePin, editPin, addPin, deletePin
 
 router.get('/', getAllPinsWithUsers)
 router.get('/', getAllPins)
+
 router.get('/:id', getSinglePin)
 router.patch('/:id', editPin)
 router.post('/', addPin)

@@ -6,7 +6,7 @@ const { getAllUsers, getSingleUser, editUser, addUser, logoutUser, loginUser, is
 
 /* GET users listing. */
 router.get('/', getAllUsers)
-router.get('/:id', getSingleUser)
+router.get('/:name', getSingleUser)
 router.patch('/:id', editUser)
 router.post('/', addUser)
 

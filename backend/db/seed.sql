@@ -53,9 +53,8 @@ CREATE TABLE comments (
     body TEXT NOT NULL
 );
 
--- INSERT INTO users(full_name, username, email, pic_url) VALUES (
---     'Dog Dummy', 'dummyDog', 'pupone@dummymail.com', 'https://images.dog.ceo/breeds/stbernard/n02109525_3531.jpg'), (
---     'Pup Dummy', 'dummyPup', 'puptwo@dummymail.com', 'https://images.dog.ceo/breeds/maltese/n02085936_8867.jpg');
+-- INSERT INTO users(full_name, username, email, password, pic_url) VALUES (
+--     'Corey', 'coreyyy', 'corey@corey.com', corey), (
 
 -- INSERT INTO boards(user_id, title) VALUES (1, 'boardOne'), (2, 'boardTwo');
 
