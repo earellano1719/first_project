@@ -2,8 +2,9 @@ const { db } = require('../index.js')
 
 
 
-const getAllPinsWithUsers = (req, res, next) => {
-    db.any('SELECT * FROM users JOIN pins ON (users.id=user_id)')
+const getAllUserPins = (req, res, next) => {
+    let userId = req.params.name
+    db.any('SELECT * FROM users JOIN pins ON (users.id=user_id) WHERE username=$1 ORDER BY pins.id DESC', [userId])
     .then((pins) => {
         res.status(200).json({
             status: 'success',
@@ -90,4 +91,4 @@ const deletePin = (req, res, next) => {
     })
 }
 
-module.exports = { getAllPinsWithUsers, getAllPins, getSinglePin, editPin, addPin, deletePin }
+module.exports = { getAllUserPins, getAllPins, getSinglePin, editPin, addPin, deletePin }

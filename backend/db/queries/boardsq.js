@@ -1,7 +1,8 @@
 const { db } = require('../index.js')
 
-const getAllBoardsWithPins = (req, res, next) => {
-    db.any('SELECT * FROM boards JOIN pins ON (boards.id=board_id) ')
+const getAllBoardsWithPinsCurrentUser = (req, res, next) => {
+    let userId = req.params.name
+    db.any('SELECT * FROM boards JOIN pins ON (boards.id=board_id) JOIN users ON (pins.id=pins.id) WHERE users.username=$1 ORDER BY pins.id DESC', [userId])
     .then(boards => {
         res.status(200).json({
             status: 'success',
@@ -13,6 +14,20 @@ const getAllBoardsWithPins = (req, res, next) => {
         next(err)
     })
 }
+
+// const getAllBoardsWithPinsCurrentUser = (req, res, next) => {
+//     db.any('SELECT * FROM boards JOIN pins ON (boards.id=board_id) ')
+//     .then(boards => {
+//         res.status(200).json({
+//             status: 'success',
+//             boards: boards,
+//             message: 'all boards'
+//         })
+//     })
+//     .catch((err) => {
+//         next(err)
+//     })
+// }
 
 const getAllBoards = (req, res, next) => {
     db.any('SELECT * FROM boards')
@@ -62,7 +77,7 @@ const editBoard = (req, res, next) => {
 }
 
 const addBoard = (req, res, next) => {
-    db.none('INSERT INTO boards (user_id, title) VALUES (${user_id}, ${title})', req.body)
+    db.none('INSERT INTO boards (use_id, title) VALUES (${use_id}, ${title})', req.body)
     .then(() => {
         res.status(200).json({
             status: 'success',
@@ -88,4 +103,4 @@ const deleteBoard = (req, res, next) => {
     })
 }
 
-module.exports = {getAllBoardsWithPins, getAllBoards, getSingleBoard, editBoard, addBoard, deleteBoard}
+module.exports = {getAllBoardsWithPinsCurrentUser, getAllBoards, getSingleBoard, editBoard, addBoard, deleteBoard}

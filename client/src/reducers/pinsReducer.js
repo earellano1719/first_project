@@ -1,7 +1,8 @@
 import { GET_PINS, ADD_PINS } from '../actions/types';
 
 const initialState = {
-    userPins: []
+    userPins: [], 
+    interface: ''
 }
 
 export default function (state = initialState, action) {

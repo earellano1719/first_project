@@ -9,7 +9,7 @@ My project is a web application inspired on the classic, Pinterest. Built using 
 - [ ] User able to create boards to save pins
 - [ ] User able to view boards to save pins
 - [ ] User able to delete boards
-- [? ] User able to follow
+- [ ] User able to follow
 - [ ] User able to see post from followed users
 - [ ] Posts able to have likes
 - [ ] Posts able to have replies
@@ -42,7 +42,7 @@ My project is a web application inspired on the classic, Pinterest. Built using 
 ## Bonus(TBD)
 
  
-created_at TIMESTAMP NOT NULL
+<!-- created_at TIMESTAMP NOT NULL
 
 
 NOTIFICATIONS
@@ -50,4 +50,4 @@ NOTIFICATIONS
     read BOOLEAN NOT NULL
     tweet_id INT REFERENCES Tweets(id) ON DELETE CASCADE 
     like_id INT REFERENCES Likes(id) ON DELETE CASCADE 
-    following_id INT REFERENCES Followings(id) ON DELETE CASCADE
+    following_id INT REFERENCES Followings(id) ON DELETE CASCADE -->

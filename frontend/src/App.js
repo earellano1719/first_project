@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   getPins = () => {
-    axios.get('/pins')
+    axios.get('/pins/john')
     .then((pindata) => {
       this.setState({
         pins: pindata.data.pins

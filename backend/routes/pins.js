@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const {getAllPinsWithUsers, getAllPins, getSinglePin, editPin, addPin, deletePin} = require ('../db/queries/pinsq')
+const {getAllUserPins, getAllPins, getSinglePin, editPin, addPin, deletePin} = require ('../db/queries/pinsq')
 
-router.get('/', getAllPinsWithUsers)
-router.get('/', getAllPins)
+router.get('/:name', getAllUserPins)
+// router.get('/', getAllPins)
 
 router.get('/:id', getSinglePin)
 router.patch('/:id', editPin)

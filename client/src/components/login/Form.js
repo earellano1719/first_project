@@ -31,6 +31,7 @@ const Form = ({
           <p className='header'>Log in to see more</p>
           <p className='subHeader'>Access Pinterest's best ideas with a free account</p>
             <input
+              autoComplete='off'
               className='inputs'
               type="text"
               value={username}
@@ -57,6 +58,7 @@ const Form = ({
           <p className='header'>Sign up to see more</p>
           <p className='subHeader'>Access Pinterest's best ideas with a free account</p>
             <input
+              autoComplete='off'
               type="text"
               className='inputs'
               value={full_name}
@@ -66,6 +68,7 @@ const Form = ({
               required='required'
             />
             <input
+              autoComplete='off'
               type="text"
               className='inputs'
               value={email}
@@ -75,6 +78,7 @@ const Form = ({
               required='required'
             />
             <input
+              autoComplete='off'
               type="text"
               className='inputs'
               value={username}

@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const {getAllBoardsWithPins, getAllBoards, getSingleBoard, editBoard, addBoard, deleteBoard} = require ('../db/queries/boardsq')
+const {getAllBoardsWithPinsCurrentUser, getAllBoards, getSingleBoard, editBoard, addBoard, deleteBoard} = require ('../db/queries/boardsq')
 
-router.get('/', getAllBoards)
+router.get('/:name', getAllBoardsWithPinsCurrentUser)
 router.get('/:id', getSingleBoard)
 router.patch('/:id', editBoard)
 router.post('/', addBoard)

@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
+import '../Components/css/form.css'
 
 const Form = ({
   match,
@@ -14,62 +15,92 @@ const Form = ({
 }) => {
   const path = match.path;
   return (
-    <React.Fragment>
-      <h1> {path === "/auth/login" ? "Login" : "Register"} </h1>
+    <div className='form'>
+   
+      
+        <a href={path === '/auth/login' ? '/auth/register' : '/auth/login'}>
+          <button className='formLink'>{path === '/auth/login' ? 'Sign up' : 'Log in'}</button>
+        </a>
+      
+
       <form onSubmit={path === "/auth/login" ? loginUser : registerUser}>
         {path === '/auth/login' ?
-          <>
+          <div className='loginForm'>
+          <img className='formLogo' src="http://backgroundcheckall.com/wp-content/uploads/2018/10/pinterest-logo-png-transparent-background-2.png" alt=''/>
+          <p className='header'>Log in to see more</p>
+          <p className='subHeader'>Access Pinterest's best ideas with a free account</p>
             <input
+              autoComplete='off'
+              className='inputs'
               type="text"
               value={username}
               name="username"
               placeholder="username"
               onChange={handleChange}
+              required='required'
             />
             <input
-              type="text"
+              type="password"
+              className='inputs'
               value={password}
               name="password"
               placeholder="password"
               onChange={handleChange}
+              required='required'
             />
-          </>
+            <button type="submit">Log in</button>
+          </div>
+         
         :
-          <>
+          <div className='registerForm'>
+          <img className='formLogo' src="http://backgroundcheckall.com/wp-content/uploads/2018/10/pinterest-logo-png-transparent-background-2.png" alt=''/>
+          <p className='header'>Sign up to see more</p>
+          <p className='subHeader'>Access Pinterest's best ideas with a free account</p>
             <input
+              autoComplete='off'
               type="text"
+              className='inputs'
               value={full_name}
               name="full_name"
-              placeholder="full_name"
+              placeholder="full name"
               onChange={handleChange}
+              required='required'
             />
             <input
+              autoComplete='off'
               type="text"
+              className='inputs'
               value={email}
               name="email"
               placeholder="email"
               onChange={handleChange}
+              required='required'
             />
             <input
+              autoComplete='off'
               type="text"
+              className='inputs'
               value={username}
               name="username"
               placeholder="username"
               onChange={handleChange}
+              required='required'
             />
             <input
-              type="text"
+              type="password"
+              className='inputs'
               value={password}
               name="password"
               placeholder="password"
               onChange={handleChange}
+              required='required'
             />
-          </>
+            <button type="submit">Continue</button>
+          </div>
         }
-        <button type="submit">Submit</button>
       </form>
-      <p>{isLoggedIn ? "Logged In!" : ""}</p>
-    </React.Fragment>
+   
+    </div>
   );
 };
 

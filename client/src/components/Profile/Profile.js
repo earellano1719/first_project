@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { boardsView, pinsView, pinFormView, boardFormView } from '../../actions/profileActions'
+import { userInfo } from '../../actions/loginActions'
 import '../../css/profile.css'
 import Boards from '../Boards/Boards'
-import Pins from '../Pins/Pins'
+import UserPins from '../Pins/UserPins'
 import PinBuilder from '../Pins/PinBuilder'
 import CreateBoard from '../Boards/CreateBoard'
 
 
 class Profile extends Component{
+
+    componentDidMount = () => {
+        this.getUserInfo()
+    }
+
+    getUserInfo = (user) => {
+        this.props.userInfo(this.props.match.url)
+    }
     
     render(){
         const { userDetails, profileView, pinForm, boardForm } = this.props;
@@ -72,7 +81,7 @@ class Profile extends Component{
                 }
                 {pinForm || boardForm ? null :
                     <div>
-                        {profileView ? <Boards /> : <Pins />}
+                        {profileView ? <Boards /> : <UserPins />}
                     </div>
                 }
             </div>
@@ -94,6 +103,7 @@ const mapStateToProps = state => ({
       pinsView: () => dispatch(pinsView()),
       pinFormView: () => dispatch(pinFormView()),
       boardFormView: () => dispatch(boardFormView()),
+      userInfo: (user) => dispatch(userInfo(user)),
     }
   }
   

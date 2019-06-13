@@ -72,7 +72,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 
 
-    return(
+    <!-- return(
         <>
         <nav className='navBar'>
             <NavLink to={'/'}><img className='logo' src="http://backgroundcheckall.com/wp-content/uploads/2018/10/pinterest-logo-png-transparent-background-2.png" alt=''/></NavLink>
@@ -83,4 +83,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
                
         </nav>
         </>
-    )
+    ) -->

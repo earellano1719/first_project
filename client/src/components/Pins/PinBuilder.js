@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { pinFormView } from '../../actions/profileActions'
-import { addPin } from '../../actions/pinsActions'
+import { addPin, getUserPins } from '../../actions/pinsActions'
 import '../../css/pins.css'
 
 class PinBuilder extends Component {
     state={
         user_id: parseInt(`${this.props.userDetails.id}`),
-        board_id: parseInt('1'),
+        board_id: parseInt('5'),
         url: '',
         caption: ''
+    }
+
+    componentDidUpdate = () => {
+        this.props.getUserPins(`${this.props.userDetails.username}`);
     }
 
     onChange = e => {
@@ -75,6 +79,7 @@ const mapDispatchToProps = (dispatch) => {
     return {
         pinFormView: () => dispatch(pinFormView()),
         addPin: (pin) => dispatch(addPin(pin)),
+        getUserPins: () => dispatch(getUserPins()),
     }
 }
 
