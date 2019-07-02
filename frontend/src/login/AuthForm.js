@@ -25,7 +25,6 @@ class AuthForm extends Component {
     const { full_name, email, username, password } = this.state;
 
     await axios.post("/users/", { full_name, email, username, password });
-
     Auth.authenticateUser(username);
 
     await axios.post("/users/login", { username, password });
@@ -55,10 +54,11 @@ class AuthForm extends Component {
   loginUser = e => {
     e.preventDefault();
     const { username, password } = this.state;
-
+    
     axios
-      .post("/users/login", { username, password })
-      .then(() => {
+    .post("/users/login", { username, password })
+    .then(() => {
+      debugger
         Auth.authenticateUser(username);
       })
       .then(() => {

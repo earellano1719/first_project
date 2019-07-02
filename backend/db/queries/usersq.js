@@ -47,19 +47,19 @@ const editUser = (req, res, next) => {
         })
     })
     .catch((err) => {
-        return next(err)
+        return next(err), console.log(err)
     })
 }
 
 const addUser = (req, res, next) => {
-    const hash = authHelpers.createHash(req.body.password);
+    const hash = authHelpers.createHash(req.body.password_digest);
   
     db.none(
-      "INSERT INTO users (username, email, full_name, password_digest) VALUES (${username}, ${email}, ${full_name}, ${password})",
+      "INSERT INTO users (username, email, full_name, password_digest) VALUES (${username}, ${email}, ${full_name}, ${password_digest})",
       { username: req.body.username, 
         full_name: req.body.full_name, 
         email: req.body.email, 
-        password: hash }
+        password_digest: hash }
     )
       .then(() => {
         res.status(200).json({
@@ -94,6 +94,7 @@ const logoutUser = (req, res, next) => {
   }
   
 const loginUser = (req, res) => {
+    console.log('yeah!')
 res.json(req.user);
 }
 

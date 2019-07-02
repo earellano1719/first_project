@@ -30,7 +30,7 @@ class App extends Component {
   checkAuthenticateStatus = () => {
     axios.post("/users/isLoggedIn").then(user => {
       if (user.data.username === Auth.getToken()) {
-        this.getAll();
+        // this.getAll();
         this.setState({
           isLoggedIn: Auth.isUserAuthenticated(),
           username: Auth.getToken()
@@ -66,7 +66,7 @@ class App extends Component {
   }
 
   getPins = () => {
-    axios.get('/pins/john')
+    axios.get('/pins')
     .then((pindata) => {
       this.setState({
         pins: pindata.data.pins

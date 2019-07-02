@@ -8,11 +8,11 @@ const { getAllUsers, getSingleUser, editUser, addUser, logoutUser, loginUser, is
 router.get('/', getAllUsers)
 router.get('/:name', getSingleUser)
 router.patch('/:id', editUser)
-router.post('/', addUser)
-
-// router.post("/new", db.createUser);
 router.post("/login", passport.authenticate("local", {}), loginUser);
 router.post("/isLoggedIn", isLoggedIn);
 router.post("/logout", loginRequired, logoutUser);
+router.post('/', addUser)
+
+// router.post("/new", db.createUser);
 
 module.exports = router;
